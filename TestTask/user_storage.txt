@@ -1,0 +1,6 @@
+{
+  "user_storage": {
+    "username": "username@user.com",
+    "password": "qwerty"
+  }
+}

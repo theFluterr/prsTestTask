@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C53a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TTLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xt-l3-Cfs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nA0-mZ-n5A">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oracleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Rip-aL-nY4">
+                                                <rect key="frame" x="52.5" y="165" width="270" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="270" id="VLX-nz-eiK"/>
+                                                    <constraint firstAttribute="width" secondItem="Rip-aL-nY4" secondAttribute="height" multiplier="277:44" id="hWb-G9-YhE"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldh-Jp-6qc">
+                                                <rect key="frame" x="52.5" y="271" width="270" height="21"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ADY-JA-0c6">
+                                                <rect key="frame" x="52.5" y="302" width="270" height="21"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин или пароль введены неверно" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jc-60-Ehn">
+                                                <rect key="frame" x="53" y="333" width="269.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBu-ex-GgH">
+                                                <rect key="frame" x="53" y="376" width="269.5" height="34"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="processLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4L-cl-1H3"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rXd-Xs-E0y">
+                                                <rect key="frame" x="177" y="228" width="20" height="20"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Rip-aL-nY4" firstAttribute="top" secondItem="nA0-mZ-n5A" secondAttribute="top" constant="165" id="8KN-48-W1N"/>
+                                            <constraint firstItem="xBu-ex-GgH" firstAttribute="top" secondItem="6Jc-60-Ehn" secondAttribute="bottom" constant="25" id="Bgi-zy-yCt"/>
+                                            <constraint firstItem="rXd-Xs-E0y" firstAttribute="top" secondItem="Rip-aL-nY4" secondAttribute="bottom" constant="20" id="L6l-91-HRI"/>
+                                            <constraint firstItem="xBu-ex-GgH" firstAttribute="trailing" secondItem="6Jc-60-Ehn" secondAttribute="trailing" id="Lpq-YK-MIW"/>
+                                            <constraint firstItem="6Jc-60-Ehn" firstAttribute="trailing" secondItem="ADY-JA-0c6" secondAttribute="trailing" id="OZK-I2-e5I"/>
+                                            <constraint firstItem="6Jc-60-Ehn" firstAttribute="top" secondItem="ADY-JA-0c6" secondAttribute="bottom" constant="10" id="ZVG-3d-xKD"/>
+                                            <constraint firstItem="Rip-aL-nY4" firstAttribute="centerX" secondItem="nA0-mZ-n5A" secondAttribute="centerX" id="b3k-1l-Geo"/>
+                                            <constraint firstItem="ADY-JA-0c6" firstAttribute="top" secondItem="Ldh-Jp-6qc" secondAttribute="bottom" constant="10" id="bo4-iZ-K4S"/>
+                                            <constraint firstItem="xBu-ex-GgH" firstAttribute="leading" secondItem="6Jc-60-Ehn" secondAttribute="leading" id="ff0-sT-QlY"/>
+                                            <constraint firstItem="ADY-JA-0c6" firstAttribute="leading" secondItem="Ldh-Jp-6qc" secondAttribute="leading" id="g0q-wX-kJi"/>
+                                            <constraint firstItem="rXd-Xs-E0y" firstAttribute="centerX" secondItem="nA0-mZ-n5A" secondAttribute="centerX" id="jIU-J5-dP4"/>
+                                            <constraint firstItem="6Jc-60-Ehn" firstAttribute="leading" secondItem="ADY-JA-0c6" secondAttribute="leading" id="m9n-wv-Ows"/>
+                                            <constraint firstItem="Ldh-Jp-6qc" firstAttribute="trailing" secondItem="Rip-aL-nY4" secondAttribute="trailing" id="u4M-gF-tr1"/>
+                                            <constraint firstItem="ADY-JA-0c6" firstAttribute="trailing" secondItem="Ldh-Jp-6qc" secondAttribute="trailing" id="vr1-a2-OnU"/>
+                                            <constraint firstItem="Ldh-Jp-6qc" firstAttribute="leading" secondItem="Rip-aL-nY4" secondAttribute="leading" id="xca-Pw-VR4"/>
+                                            <constraint firstItem="Ldh-Jp-6qc" firstAttribute="top" secondItem="Rip-aL-nY4" secondAttribute="bottom" constant="63" id="zan-30-enp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nA0-mZ-n5A" firstAttribute="top" secondItem="5xt-l3-Cfs" secondAttribute="top" id="FbK-aD-CI1"/>
+                                    <constraint firstAttribute="trailing" secondItem="nA0-mZ-n5A" secondAttribute="trailing" id="c0s-la-eJb"/>
+                                    <constraint firstItem="nA0-mZ-n5A" firstAttribute="leading" secondItem="5xt-l3-Cfs" secondAttribute="leading" id="naz-Dn-3R2"/>
+                                    <constraint firstAttribute="bottom" secondItem="nA0-mZ-n5A" secondAttribute="bottom" id="pyz-U6-sST"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5xt-l3-Cfs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6kr-jK-3QU"/>
+                            <constraint firstAttribute="trailing" secondItem="5xt-l3-Cfs" secondAttribute="trailing" id="PDa-y2-wc2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5xt-l3-Cfs" secondAttribute="bottom" id="Ref-cJ-sHI"/>
+                            <constraint firstItem="5xt-l3-Cfs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ula-JB-3Nj"/>
+                            <constraint firstItem="nA0-mZ-n5A" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vdF-6L-ZCt"/>
+                            <constraint firstItem="nA0-mZ-n5A" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="z6z-kz-gkd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rXd-Xs-E0y" id="ipT-Ui-3lb"/>
+                        <outlet property="errorLabel" destination="6Jc-60-Ehn" id="Cun-iu-Qcc"/>
+                        <outlet property="passwordTextField" destination="ADY-JA-0c6" id="MuD-wc-7MA"/>
+                        <outlet property="proceedButton" destination="xBu-ex-GgH" id="Y7w-GF-CW9"/>
+                        <outlet property="scrollView" destination="5xt-l3-Cfs" id="Fvc-77-Dtp"/>
+                        <outlet property="usernameTextField" destination="Ldh-Jp-6qc" id="JMg-wl-wXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="oracleLogo" width="1926" height="243"/>
+    </resources>
 </document>

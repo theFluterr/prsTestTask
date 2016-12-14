@@ -7,4 +7,5 @@ target 'TestTask' do
 
   # Pods for TestTask
 	pod 'ReactiveObjC', '~> 2.1'
+	pod 'BlocksKit'
 end

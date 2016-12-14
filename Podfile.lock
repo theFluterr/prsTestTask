@@ -1,12 +1,29 @@
 PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - ReactiveObjC (2.1.0)
 
 DEPENDENCIES:
+  - BlocksKit
   - ReactiveObjC (~> 2.1)
 
 SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   ReactiveObjC: 2edae120982d8e6d5407503a10edcfdd87eb8639
 
-PODFILE CHECKSUM: c451c4be52efc40b0b2735940f66bbeac9717474
+PODFILE CHECKSUM: 265a85b6f8d10683f67498978da2a70f3f70f197
 
 COCOAPODS: 1.2.0.beta.1
