@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6AC866E3599F72C101BA7338 /* libPods-TestTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9283E5FF9EE9731B99D402 /* libPods-TestTask.a */; };
+		754A078B1E0449C000E1F6E2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A078A1E0449C000E1F6E2 /* UIColor+Hex.m */; };
+		754A078F1E0475E800E1F6E2 /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */; };
 		75CE40C71E004DF30082FEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40C61E004DF30082FEBE /* main.m */; };
 		75CE40CA1E004DF30082FEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40C91E004DF30082FEBE /* AppDelegate.m */; };
 		75CE40D01E004DF30082FEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40CE1E004DF30082FEBE /* Main.storyboard */; };
@@ -15,15 +17,25 @@
 		75CE40D51E004DF30082FEBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40D31E004DF30082FEBE /* LaunchScreen.storyboard */; };
 		75CE40DE1E005DC50082FEBE /* TTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40DD1E005DC50082FEBE /* TTLoginViewController.m */; };
 		75CE40E31E01484E0082FEBE /* TTLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40E21E01484E0082FEBE /* TTLoginManager.m */; };
-		75CE40E51E0156AB0082FEBE /* user_storage.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40E41E0156AB0082FEBE /* user_storage.txt */; };
 		75CE40E81E015BB50082FEBE /* TTLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40E71E015BB50082FEBE /* TTLoginViewModel.m */; };
 		75CE40EB1E015D7A0082FEBE /* TTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40EA1E015D7A0082FEBE /* TTUser.m */; };
 		75CE40F01E0171F80082FEBE /* TTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40EF1E0171F80082FEBE /* TTUserManager.m */; };
+		75CE40F21E0173EA0082FEBE /* auth_storage.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40F11E0173EA0082FEBE /* auth_storage.txt */; };
+		75CE40F41E0189FB0082FEBE /* user_storage.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40F31E0189FB0082FEBE /* user_storage.txt */; };
+		75CE40F71E0192420082FEBE /* TTUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40F61E0192410082FEBE /* TTUserTableViewController.m */; };
+		75CE40FA1E0192700082FEBE /* TTUserTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */; };
+		75CE40FE1E01929E0082FEBE /* TTUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */; };
+		75CE41011E0192EA0082FEBE /* TTUserCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */; };
+		75CE41051E01933D0082FEBE /* TTSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE41041E01933D0082FEBE /* TTSplitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A9283E5FF9EE9731B99D402 /* libPods-TestTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		580CFB21A826BF4726955EEB /* Pods-TestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		754A07891E0449C000E1F6E2 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		754A078A1E0449C000E1F6E2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		754A078D1E0475E800E1F6E2 /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
+		754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
 		75CE40C21E004DF30082FEBE /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CE40C61E004DF30082FEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75CE40C81E004DF30082FEBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,13 +48,24 @@
 		75CE40DD1E005DC50082FEBE /* TTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewController.m; sourceTree = "<group>"; };
 		75CE40E11E01484E0082FEBE /* TTLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginManager.h; sourceTree = "<group>"; };
 		75CE40E21E01484E0082FEBE /* TTLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginManager.m; sourceTree = "<group>"; };
-		75CE40E41E0156AB0082FEBE /* user_storage.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = user_storage.txt; path = TestTask/user_storage.txt; sourceTree = "<group>"; };
 		75CE40E61E015BB50082FEBE /* TTLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLoginViewModel.h; sourceTree = "<group>"; };
 		75CE40E71E015BB50082FEBE /* TTLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLoginViewModel.m; sourceTree = "<group>"; };
 		75CE40E91E015D7A0082FEBE /* TTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUser.h; sourceTree = "<group>"; };
 		75CE40EA1E015D7A0082FEBE /* TTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUser.m; sourceTree = "<group>"; };
 		75CE40EE1E0171F80082FEBE /* TTUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserManager.h; sourceTree = "<group>"; };
 		75CE40EF1E0171F80082FEBE /* TTUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserManager.m; sourceTree = "<group>"; };
+		75CE40F11E0173EA0082FEBE /* auth_storage.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = auth_storage.txt; path = TestTask/auth_storage.txt; sourceTree = "<group>"; };
+		75CE40F31E0189FB0082FEBE /* user_storage.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = user_storage.txt; path = TestTask/user_storage.txt; sourceTree = "<group>"; };
+		75CE40F51E0192410082FEBE /* TTUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserTableViewController.h; sourceTree = "<group>"; };
+		75CE40F61E0192410082FEBE /* TTUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserTableViewController.m; sourceTree = "<group>"; };
+		75CE40F81E0192700082FEBE /* TTUserTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserTableViewModel.h; sourceTree = "<group>"; };
+		75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserTableViewModel.m; sourceTree = "<group>"; };
+		75CE40FC1E01929E0082FEBE /* TTUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserTableViewCell.h; sourceTree = "<group>"; };
+		75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserTableViewCell.m; sourceTree = "<group>"; };
+		75CE40FF1E0192EA0082FEBE /* TTUserCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserCellViewModel.h; sourceTree = "<group>"; };
+		75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserCellViewModel.m; sourceTree = "<group>"; };
+		75CE41031E01933D0082FEBE /* TTSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSplitViewController.h; sourceTree = "<group>"; };
+		75CE41041E01933D0082FEBE /* TTSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSplitViewController.m; sourceTree = "<group>"; };
 		F3E550E6BE8259D2311FC8BE /* Pods-TestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,10 +89,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		754A078C1E0449CA00E1F6E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				754A07891E0449C000E1F6E2 /* UIColor+Hex.h */,
+				754A078A1E0449C000E1F6E2 /* UIColor+Hex.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		754A07901E0475F400E1F6E2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				754A078D1E0475E800E1F6E2 /* TTDetailViewController.h */,
+				754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		75CE40B91E004DF30082FEBE = {
 			isa = PBXGroup;
 			children = (
-				75CE40E41E0156AB0082FEBE /* user_storage.txt */,
+				75CE40F11E0173EA0082FEBE /* auth_storage.txt */,
+				75CE40F31E0189FB0082FEBE /* user_storage.txt */,
 				75CE40C41E004DF30082FEBE /* TestTask */,
 				75CE40C31E004DF30082FEBE /* Products */,
 				FECE60B9D3297C709FA950AC /* Pods */,
@@ -88,6 +130,7 @@
 		75CE40C41E004DF30082FEBE /* TestTask */ = {
 			isa = PBXGroup;
 			children = (
+				754A078C1E0449CA00E1F6E2 /* Helpers */,
 				75CE40C81E004DF30082FEBE /* AppDelegate.h */,
 				75CE40C91E004DF30082FEBE /* AppDelegate.m */,
 				75CE40ED1E0166800082FEBE /* Service */,
@@ -112,6 +155,9 @@
 		75CE40DF1E005DEF0082FEBE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				754A07901E0475F400E1F6E2 /* Detail */,
+				75CE41061E0193480082FEBE /* SplitVC */,
+				75CE40FB1E01927C0082FEBE /* List */,
 				75CE40E01E005DF40082FEBE /* Login */,
 				75CE40CE1E004DF30082FEBE /* Main.storyboard */,
 			);
@@ -147,6 +193,38 @@
 				75CE40EF1E0171F80082FEBE /* TTUserManager.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		75CE40FB1E01927C0082FEBE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				75CE40F51E0192410082FEBE /* TTUserTableViewController.h */,
+				75CE40F61E0192410082FEBE /* TTUserTableViewController.m */,
+				75CE40F81E0192700082FEBE /* TTUserTableViewModel.h */,
+				75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */,
+				75CE41021E0192F20082FEBE /* UserCell */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		75CE41021E0192F20082FEBE /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				75CE40FC1E01929E0082FEBE /* TTUserTableViewCell.h */,
+				75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */,
+				75CE40FF1E0192EA0082FEBE /* TTUserCellViewModel.h */,
+				75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */,
+			);
+			name = UserCell;
+			sourceTree = "<group>";
+		};
+		75CE41061E0193480082FEBE /* SplitVC */ = {
+			isa = PBXGroup;
+			children = (
+				75CE41031E01933D0082FEBE /* TTSplitViewController.h */,
+				75CE41041E01933D0082FEBE /* TTSplitViewController.m */,
+			);
+			name = SplitVC;
 			sourceTree = "<group>";
 		};
 		FECE60B9D3297C709FA950AC /* Pods */ = {
@@ -220,10 +298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75CE40F21E0173EA0082FEBE /* auth_storage.txt in Resources */,
 				75CE40D51E004DF30082FEBE /* LaunchScreen.storyboard in Resources */,
-				75CE40E51E0156AB0082FEBE /* user_storage.txt in Resources */,
 				75CE40D21E004DF30082FEBE /* Assets.xcassets in Resources */,
 				75CE40D01E004DF30082FEBE /* Main.storyboard in Resources */,
+				75CE40F41E0189FB0082FEBE /* user_storage.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +362,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				75CE40DE1E005DC50082FEBE /* TTLoginViewController.m in Sources */,
+				75CE40FA1E0192700082FEBE /* TTUserTableViewModel.m in Sources */,
 				75CE40F01E0171F80082FEBE /* TTUserManager.m in Sources */,
+				754A078F1E0475E800E1F6E2 /* TTDetailViewController.m in Sources */,
 				75CE40CA1E004DF30082FEBE /* AppDelegate.m in Sources */,
 				75CE40C71E004DF30082FEBE /* main.m in Sources */,
+				75CE40F71E0192420082FEBE /* TTUserTableViewController.m in Sources */,
+				75CE40FE1E01929E0082FEBE /* TTUserTableViewCell.m in Sources */,
 				75CE40E81E015BB50082FEBE /* TTLoginViewModel.m in Sources */,
 				75CE40EB1E015D7A0082FEBE /* TTUser.m in Sources */,
+				75CE41051E01933D0082FEBE /* TTSplitViewController.m in Sources */,
 				75CE40E31E01484E0082FEBE /* TTLoginManager.m in Sources */,
+				75CE41011E0192EA0082FEBE /* TTUserCellViewModel.m in Sources */,
+				754A078B1E0449C000E1F6E2 /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +418,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -379,6 +466,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

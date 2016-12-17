@@ -13,6 +13,7 @@
 
 @interface TTLoginManager : NSObject
 
-- (RACSignal *)loginWithUser:(TTUser *)user;
+- (RACSignal * _Nullable)loginWithUser:(TTUser * _Nonnull)user;
++ (BOOL)shouldWriteToUserDefaults;
 
 @end

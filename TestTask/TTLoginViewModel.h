@@ -10,8 +10,8 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 
 typedef enum TTLoginStatus : NSUInteger {
-    LoginSucceeded,
-    LoginFailed
+    LoginFailed,
+    LoginSucceeded
 } TTLoginStatus;
 
 @interface TTLoginViewModel : NSObject

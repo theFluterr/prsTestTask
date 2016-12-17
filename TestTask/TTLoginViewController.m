@@ -10,8 +10,10 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "TTLoginManager.h"
 #import "TTLoginViewModel.h"
+#import "TTSplitViewController.h"
 
 @interface TTLoginViewController ()
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -29,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.viewModel = [TTLoginViewModel new]; 
+    self.viewModel = [TTLoginViewModel new];
     
     self.scrollView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.errorLabel.hidden = YES;
@@ -42,10 +44,11 @@
      subscribeNext:^(NSNumber * _Nullable new) {
          [self.activityIndicator stopAnimating];
          [self.activityIndicator setHidden:YES];
-         if ([new isEqual:@0]) {
+         if ([new isEqual:@1]) {
              self.errorLabel.hidden = NO;
              self.errorLabel.text = @"WELC";
              self.errorLabel.textColor = [UIColor greenColor];
+             [self performSegueWithIdentifier:@"proceedToSplitViewController" sender:nil];
 
          } else {
              self.errorLabel.hidden = NO;
@@ -65,6 +68,8 @@
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
 }
+
+
 #pragma mark - keyboard handling
 
 - (void)registerForKeyboardNotifications
@@ -89,12 +94,11 @@
     
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
-    CGPoint scrollPoint = CGPointMake(0.0, self.usernameTextField.frame.origin.y-kbSize.height);
+    CGPoint scrollPoint = CGPointMake(0.0, self.proceedButton.frame.origin.y-kbSize.height - 30);
     [self.scrollView setContentOffset:scrollPoint animated:YES];
     [self.scrollView setAlwaysBounceVertical:YES];
 }
 
-// Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
@@ -107,5 +111,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+}
 
 @end

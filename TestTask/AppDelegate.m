@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "TTLoginManager.h"
+#import "TTSplitViewController.h"
+#import "TTLoginViewController.h"
+#import "UIColor+Hex.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +20,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIFont *titleFont = [UIFont systemFontOfSize:19.0 weight:0.7];
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithHex:0xe6001e]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHex:0xe6001e], NSFontAttributeName: titleFont}];
+    
+    UIStoryboard *storyboardRef = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    if (![TTLoginManager shouldWriteToUserDefaults]) {
+        TTSplitViewController *splitVC = [storyboardRef instantiateViewControllerWithIdentifier:@"splitVC"];
+        self.window.rootViewController = splitVC;
+        [self.window makeKeyAndVisible];
+    } else {
+        TTLoginViewController *loginVC = [storyboardRef instantiateViewControllerWithIdentifier:@"loginVC"];
+        self.window.rootViewController = loginVC;
+        [self.window makeKeyAndVisible];
+    }
+    
     return YES;
 }
 

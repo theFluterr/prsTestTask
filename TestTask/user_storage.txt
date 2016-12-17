@@ -1,6 +1,65 @@
 {
-  "user_storage": {
-    "username": "username@user.com",
-    "password": "qwerty"
-  }
+"users":
+[
+{
+"username": "username@user.com",
+"display_name": "User Userovich",
+"status": 0
+},
+{
+"username": "use@user.com",
+"display_name": "Dsers Userovich",
+"status": 1
+},
+{
+"username": "use@user.com",
+"display_name": "Daers Userovich",
+"status": 2
+},
+{
+"username": "use@user.com",
+"display_name": "Dbers Userovich",
+"status": 0
+},
+{
+"username": "use@user.com",
+"display_name": "Asers Userovich",
+"status": 1
+},
+{
+"username": "use@user.com",
+"display_name": "Ssers Userovich",
+"status": 1
+},
+{
+"username": "use@user.com",
+"display_name": "Fsers Userovich",
+"status": 2
+},
+{
+"username": "use@user.com",
+"display_name": "Fsers Userovich",
+"status": 0
+},
+{
+"username": "use@user.com",
+"display_name": "Фsers Userovich",
+"status": 0
+},
+{
+"username": "use@user.com",
+"display_name": "Asers Userovich",
+"status": 1
+},
+{
+"username": "use@user.com",
+"display_name": "2sers Userovich",
+"status": 2
+},
+{
+"username": "use@user.com",
+"display_name": "Rsers Userovich",
+"status": 1
+}
+]
 }

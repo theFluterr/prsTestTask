@@ -11,6 +11,8 @@
 
 @interface TTUserManager : NSObject
 
-@property (nonatomic) NSArray<TTUser *> *users; 
+@property (nonatomic) NSArray<TTUser *> *users;
+
+- (void)fetchUsers; 
 
 @end
