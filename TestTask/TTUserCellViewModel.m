@@ -7,12 +7,11 @@
 //
 
 #import "TTUserCellViewModel.h"
-#import "TTUser.h"
 #import "UIColor+Hex.h"
 
 @interface TTUserCellViewModel ()
 
-@property (nonatomic) TTUser *user;
+@property (nonatomic, readwrite) TTUser *user;
 
 @end
 
@@ -38,6 +37,45 @@
         return [UIImage imageNamed:@"emptyAvatar"]; 
     } else {
         return _userImage; 
+    }
+}
+
+- (TTUserType)userType {
+    return self.user.userType; 
+}
+
+- (UIImage *)chatButtonImage {
+    if (self.user.userType == Custom) {
+        switch (self.user.status) {
+            case Online:
+                return [UIImage imageNamed:@"chatAvailableIcon"];
+                break;
+            case DontDisturb:
+                return [UIImage imageNamed:@"chatOrange"];
+                break;
+            default:
+                return [UIImage imageNamed:@"chatGray"];
+                break;
+        }
+    } else {
+        return [UIImage imageNamed:@"plusGray"];
+    }
+}
+
+- (UIImage *)phoneButtonImage {
+    if (self.user.userType == PhoneBook) {
+        return [UIImage imageNamed:@"phoneGray"];
+    }
+    switch (self.user.status) {
+        case Online:
+            return [UIImage imageNamed:@"phoneAvailableIcon"];
+            break;
+        case DontDisturb:
+            return [UIImage imageNamed:@"phoneOrange"];
+            break;
+        default:
+            return [UIImage imageNamed:@"phoneGray"];
+            break;
     }
 }
 

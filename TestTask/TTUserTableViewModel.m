@@ -11,6 +11,7 @@
 #import <BlocksKit/BlocksKit.h>
 #import "TTUserCellViewModel.h"
 #import "TTUser.h"
+#import "TTUserDetailViewModel.h"
 
 @interface TTUserTableViewModel ()
 
@@ -19,6 +20,10 @@
 @property (nonatomic, readwrite) NSDictionary<NSString *, NSMutableArray<TTUserCellViewModel *> *> *cellViewModels;
 @property (nonatomic, readwrite) NSArray *alphabet;
 @property (nonatomic, readwrite) NSArray *sectionTitles;
+
+@property (nonatomic, readwrite) NSArray *filteredSectionTitles;
+@property (nonatomic, readwrite) NSDictionary <NSString *, NSMutableArray<TTUserCellViewModel *> *> *filteredCellViewModels;
+@property (nonatomic) BOOL isFiltered; 
 
 @end
 
@@ -40,6 +45,19 @@
     [self.userManager fetchUsers];
     
     return self; 
+}
+
+- (NSDictionary<NSString *, NSMutableArray<TTUserCellViewModel *> *> *)cellViewModels {
+    if (self.searchKeyword.length > 0) {
+        NSDictionary<NSString *, NSMutableArray<TTUserCellViewModel *> *> *filteredVMs = [NSDictionary dictionaryWithDictionary:[self filterUsersBy:self.searchKeyword]];
+        return filteredVMs;
+    } else {
+        return _cellViewModels;
+    }
+}
+
+- (NSArray *)sectionTitles {
+    return [[self.cellViewModels allKeys] sortedArrayUsingSelector:@selector(compare:)]; 
 }
 
 - (void)mapViewModels:(NSArray<TTUser *> *)input {
@@ -75,10 +93,34 @@
         }
     }
     
-    self.sectionTitles = [[cellsMutableCopy allKeys] sortedArrayUsingSelector:@selector(compare:)];
-    
     self.cellViewModels = cellsMutableCopy;
+}
+
+- (TTUserDetailViewModel *)createDetailViewModelForIndexPath:(NSIndexPath *)indexPath {
+    NSString *sectionName = [self.sectionTitles objectAtIndex:indexPath.section];
+    TTUserCellViewModel *cellVM = [[self.cellViewModels objectForKey:sectionName] objectAtIndex:indexPath.row];
+    TTUserDetailViewModel *detailVM = [[TTUserDetailViewModel alloc] initWithUser:cellVM.user userManager:self.userManager];
     
+    return detailVM;
+}
+
+- (NSMutableDictionary<NSString *, NSArray<TTUserCellViewModel *> *> *)filterUsersBy:(NSString *)keyword {
+    NSMutableDictionary<NSString *, NSArray<TTUserCellViewModel *> *> *filteredCellVMs = [NSMutableDictionary new];
+    
+    [_cellViewModels enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSMutableArray<TTUserCellViewModel *> * _Nonnull obj, BOOL * _Nonnull stop) {
+       NSArray<TTUserCellViewModel *> *filteredSection = [obj bk_select:^BOOL(TTUserCellViewModel *item) {
+           if ([item.username rangeOfString:keyword options:NSCaseInsensitiveSearch].length > 0) {
+               return YES;
+           } else {
+               return NO;
+           }
+       }];
+        if (filteredSection.count > 0) {
+            [filteredCellVMs setObject:filteredSection forKey:key];
+        }
+    }];
+    
+    return filteredCellVMs;
 }
 
 @end

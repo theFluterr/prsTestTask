@@ -10,6 +10,10 @@
 		6AC866E3599F72C101BA7338 /* libPods-TestTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9283E5FF9EE9731B99D402 /* libPods-TestTask.a */; };
 		754A078B1E0449C000E1F6E2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A078A1E0449C000E1F6E2 /* UIColor+Hex.m */; };
 		754A078F1E0475E800E1F6E2 /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */; };
+		754A07981E059F2000E1F6E2 /* TTUserCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A07971E059F2000E1F6E2 /* TTUserCellViewModel.m */; };
+		754A079B1E05A09A00E1F6E2 /* TTUserDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A079A1E05A09A00E1F6E2 /* TTUserDetailViewModel.m */; };
+		754A079E1E05B57C00E1F6E2 /* TTPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A079D1E05B57C00E1F6E2 /* TTPhoneTableViewCell.m */; };
+		754A07A21E05B59200E1F6E2 /* TTPhoneCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A07A11E05B59200E1F6E2 /* TTPhoneCellViewModel.m */; };
 		75CE40C71E004DF30082FEBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40C61E004DF30082FEBE /* main.m */; };
 		75CE40CA1E004DF30082FEBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40C91E004DF30082FEBE /* AppDelegate.m */; };
 		75CE40D01E004DF30082FEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CE40CE1E004DF30082FEBE /* Main.storyboard */; };
@@ -25,8 +29,6 @@
 		75CE40F71E0192420082FEBE /* TTUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40F61E0192410082FEBE /* TTUserTableViewController.m */; };
 		75CE40FA1E0192700082FEBE /* TTUserTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */; };
 		75CE40FE1E01929E0082FEBE /* TTUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */; };
-		75CE41011E0192EA0082FEBE /* TTUserCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */; };
-		75CE41051E01933D0082FEBE /* TTSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CE41041E01933D0082FEBE /* TTSplitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,14 @@
 		754A078A1E0449C000E1F6E2 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		754A078D1E0475E800E1F6E2 /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
 		754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
+		754A07961E059F2000E1F6E2 /* TTUserCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserCellViewModel.h; sourceTree = "<group>"; };
+		754A07971E059F2000E1F6E2 /* TTUserCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserCellViewModel.m; sourceTree = "<group>"; };
+		754A07991E05A09A00E1F6E2 /* TTUserDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserDetailViewModel.h; sourceTree = "<group>"; };
+		754A079A1E05A09A00E1F6E2 /* TTUserDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserDetailViewModel.m; sourceTree = "<group>"; };
+		754A079C1E05B57C00E1F6E2 /* TTPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhoneTableViewCell.h; sourceTree = "<group>"; };
+		754A079D1E05B57C00E1F6E2 /* TTPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhoneTableViewCell.m; sourceTree = "<group>"; };
+		754A07A01E05B59200E1F6E2 /* TTPhoneCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPhoneCellViewModel.h; sourceTree = "<group>"; };
+		754A07A11E05B59200E1F6E2 /* TTPhoneCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPhoneCellViewModel.m; sourceTree = "<group>"; };
 		75CE40C21E004DF30082FEBE /* TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75CE40C61E004DF30082FEBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75CE40C81E004DF30082FEBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,10 +72,6 @@
 		75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserTableViewModel.m; sourceTree = "<group>"; };
 		75CE40FC1E01929E0082FEBE /* TTUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserTableViewCell.h; sourceTree = "<group>"; };
 		75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserTableViewCell.m; sourceTree = "<group>"; };
-		75CE40FF1E0192EA0082FEBE /* TTUserCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTUserCellViewModel.h; sourceTree = "<group>"; };
-		75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTUserCellViewModel.m; sourceTree = "<group>"; };
-		75CE41031E01933D0082FEBE /* TTSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSplitViewController.h; sourceTree = "<group>"; };
-		75CE41041E01933D0082FEBE /* TTSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSplitViewController.m; sourceTree = "<group>"; };
 		F3E550E6BE8259D2311FC8BE /* Pods-TestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestTask/Pods-TestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,8 +109,22 @@
 			children = (
 				754A078D1E0475E800E1F6E2 /* TTDetailViewController.h */,
 				754A078E1E0475E800E1F6E2 /* TTDetailViewController.m */,
+				754A07991E05A09A00E1F6E2 /* TTUserDetailViewModel.h */,
+				754A079A1E05A09A00E1F6E2 /* TTUserDetailViewModel.m */,
+				754A079F1E05B58200E1F6E2 /* Cell */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		754A079F1E05B58200E1F6E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				754A079C1E05B57C00E1F6E2 /* TTPhoneTableViewCell.h */,
+				754A079D1E05B57C00E1F6E2 /* TTPhoneTableViewCell.m */,
+				754A07A01E05B59200E1F6E2 /* TTPhoneCellViewModel.h */,
+				754A07A11E05B59200E1F6E2 /* TTPhoneCellViewModel.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		75CE40B91E004DF30082FEBE = {
@@ -156,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				754A07901E0475F400E1F6E2 /* Detail */,
-				75CE41061E0193480082FEBE /* SplitVC */,
 				75CE40FB1E01927C0082FEBE /* List */,
 				75CE40E01E005DF40082FEBE /* Login */,
 				75CE40CE1E004DF30082FEBE /* Main.storyboard */,
@@ -202,29 +221,20 @@
 				75CE40F61E0192410082FEBE /* TTUserTableViewController.m */,
 				75CE40F81E0192700082FEBE /* TTUserTableViewModel.h */,
 				75CE40F91E0192700082FEBE /* TTUserTableViewModel.m */,
-				75CE41021E0192F20082FEBE /* UserCell */,
+				75CE41021E0192F20082FEBE /* Cell */,
 			);
 			name = List;
 			sourceTree = "<group>";
 		};
-		75CE41021E0192F20082FEBE /* UserCell */ = {
+		75CE41021E0192F20082FEBE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				75CE40FC1E01929E0082FEBE /* TTUserTableViewCell.h */,
 				75CE40FD1E01929E0082FEBE /* TTUserTableViewCell.m */,
-				75CE40FF1E0192EA0082FEBE /* TTUserCellViewModel.h */,
-				75CE41001E0192EA0082FEBE /* TTUserCellViewModel.m */,
+				754A07961E059F2000E1F6E2 /* TTUserCellViewModel.h */,
+				754A07971E059F2000E1F6E2 /* TTUserCellViewModel.m */,
 			);
-			name = UserCell;
-			sourceTree = "<group>";
-		};
-		75CE41061E0193480082FEBE /* SplitVC */ = {
-			isa = PBXGroup;
-			children = (
-				75CE41031E01933D0082FEBE /* TTSplitViewController.h */,
-				75CE41041E01933D0082FEBE /* TTSplitViewController.m */,
-			);
-			name = SplitVC;
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		FECE60B9D3297C709FA950AC /* Pods */ = {
@@ -361,19 +371,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754A079B1E05A09A00E1F6E2 /* TTUserDetailViewModel.m in Sources */,
 				75CE40DE1E005DC50082FEBE /* TTLoginViewController.m in Sources */,
 				75CE40FA1E0192700082FEBE /* TTUserTableViewModel.m in Sources */,
 				75CE40F01E0171F80082FEBE /* TTUserManager.m in Sources */,
 				754A078F1E0475E800E1F6E2 /* TTDetailViewController.m in Sources */,
 				75CE40CA1E004DF30082FEBE /* AppDelegate.m in Sources */,
+				754A07A21E05B59200E1F6E2 /* TTPhoneCellViewModel.m in Sources */,
+				754A079E1E05B57C00E1F6E2 /* TTPhoneTableViewCell.m in Sources */,
 				75CE40C71E004DF30082FEBE /* main.m in Sources */,
 				75CE40F71E0192420082FEBE /* TTUserTableViewController.m in Sources */,
+				754A07981E059F2000E1F6E2 /* TTUserCellViewModel.m in Sources */,
 				75CE40FE1E01929E0082FEBE /* TTUserTableViewCell.m in Sources */,
 				75CE40E81E015BB50082FEBE /* TTLoginViewModel.m in Sources */,
 				75CE40EB1E015D7A0082FEBE /* TTUser.m in Sources */,
-				75CE41051E01933D0082FEBE /* TTSplitViewController.m in Sources */,
 				75CE40E31E01484E0082FEBE /* TTLoginManager.m in Sources */,
-				75CE41011E0192EA0082FEBE /* TTUserCellViewModel.m in Sources */,
 				754A078B1E0449C000E1F6E2 /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

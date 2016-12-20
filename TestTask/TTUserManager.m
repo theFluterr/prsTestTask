@@ -14,7 +14,6 @@
 
 @interface TTUserManager ()
 
-@property NSMutableArray *userStorage;
 @property ABAddressBookRef addressBook;
 
 @end
@@ -22,7 +21,6 @@
 @implementation TTUserManager
 - (instancetype)init {
     if (self = [super init]) {
-        _userStorage = [NSMutableArray new];
         _addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
     }
     if (!(ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusAuthorized)) {
@@ -37,6 +35,7 @@
     NSData *data = [NSData dataWithContentsOfFile:jsonPath];
     NSError *error;
     
+    NSMutableArray *userStorage = [NSMutableArray new];
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
     //REFACTOR IMPLEMENT MAP
@@ -45,17 +44,36 @@
         NSString *username = [obj objectForKey:@"username"];
         NSString *displayName = [obj objectForKey:@"display_name"];
         TTUserStatus status = [[obj objectForKey:@"status"] integerValue];
+        NSArray *phoneNumbers = [obj objectForKey:@"phone_numbers"];
         
         TTUser *user = [[TTUser alloc] initWithUsername:username];
         user.displayName = displayName;
         user.status = status;
+        user.phoneNumbers = phoneNumbers; 
         
-        [self.userStorage addObject:user];
+        [userStorage addObject:user];
     }];
     
     
-    self.users = self.userStorage;
+    self.users = userStorage;
+    [self changeStatus]; 
     [self fetchAddressBookUsers]; 
+}
+
+- (void)changeStatus {
+    NSMutableArray<TTUser *> *usersLocal = [NSMutableArray arrayWithArray:self.users];
+    
+    [usersLocal bk_each:^(TTUser *obj) {
+        NSInteger newStatus = arc4random_uniform(3);
+        obj.status = newStatus;
+    }];
+    
+    self.users = usersLocal;
+    
+    NSLog(@"Updated statuses");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self changeStatus];
+    });
 }
 
 
@@ -158,6 +176,5 @@
     
     NSLog(@"");
 }
-
 
 @end

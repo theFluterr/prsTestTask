@@ -10,10 +10,10 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "TTLoginManager.h"
 #import "TTLoginViewModel.h"
-#import "TTSplitViewController.h"
 
 @interface TTLoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -39,20 +39,21 @@
     
     [self registerForKeyboardNotifications];
     
+    @weakify(self)
     [[[RACObserve(self.viewModel, loginStatus) deliverOnMainThread]
      skip:1]
      subscribeNext:^(NSNumber * _Nullable new) {
+         @strongify(self)
          [self.activityIndicator stopAnimating];
          [self.activityIndicator setHidden:YES];
          if ([new isEqual:@1]) {
-             self.errorLabel.hidden = NO;
-             self.errorLabel.text = @"WELC";
+             self.errorLabel.hidden = YES;
              self.errorLabel.textColor = [UIColor greenColor];
              [self performSegueWithIdentifier:@"proceedToSplitViewController" sender:nil];
 
          } else {
              self.errorLabel.hidden = NO;
-             self.errorLabel.text = @"POSHEL NAHOOI";
+             self.errorLabel.text = @"Логин или пароль введены неверно";
              self.errorLabel.textColor = [UIColor redColor];
          }
     }];
@@ -94,7 +95,10 @@
     
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
-    CGPoint scrollPoint = CGPointMake(0.0, self.proceedButton.frame.origin.y-kbSize.height - 30);
+    CGPoint scrollPoint = CGPointMake(0.0, self.proceedButton.frame.origin.y-kbSize.height - 60);
+    [UIView animateWithDuration:0.5 animations:^{
+        self.logoImageView.alpha = 0.0;
+    }];
     [self.scrollView setContentOffset:scrollPoint animated:YES];
     [self.scrollView setAlwaysBounceVertical:YES];
 }
@@ -104,6 +108,9 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.scrollView.scrollIndicatorInsets = contentInsets;
+    [UIView animateWithDuration:0.5 animations:^{
+        self.logoImageView.alpha = 1.0;
+    }];
     [self.scrollView setAlwaysBounceVertical:NO];
 }
 

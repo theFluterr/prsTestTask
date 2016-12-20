@@ -8,14 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@class TTUser; 
+#import "TTUser.h"
 
 @interface TTUserCellViewModel : NSObject
 
+@property (nonatomic) UIImage *phoneButtonImage;
+@property (nonatomic) UIImage *chatButtonImage; 
+
+@property (nonatomic) TTUserType userType;
+
 @property (nonatomic) UIImage *userImage;
 @property (nonatomic) NSString *username;
-@property (nonatomic) NSAttributedString *status; 
+@property (nonatomic) NSAttributedString *status;
+@property (nonatomic, readonly) TTUser *user;
 
 - (instancetype)initWithUser:(TTUser *)user;
 

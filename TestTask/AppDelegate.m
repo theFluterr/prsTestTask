@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "TTLoginManager.h"
-#import "TTSplitViewController.h"
 #import "TTLoginViewController.h"
 #import "UIColor+Hex.h"
 
@@ -22,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    UIFont *titleFont = [UIFont systemFontOfSize:19.0 weight:0.7];
+    UIFont *titleFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:19];
     
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithHex:0xe6001e]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHex:0xe6001e], NSFontAttributeName: titleFont}];
@@ -30,7 +29,7 @@
     UIStoryboard *storyboardRef = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     if (![TTLoginManager shouldWriteToUserDefaults]) {
-        TTSplitViewController *splitVC = [storyboardRef instantiateViewControllerWithIdentifier:@"splitVC"];
+        UISplitViewController *splitVC = [storyboardRef instantiateViewControllerWithIdentifier:@"splitVC"];
         self.window.rootViewController = splitVC;
         [self.window makeKeyAndVisible];
     } else {

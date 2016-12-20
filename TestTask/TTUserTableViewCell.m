@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userstatusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *chatButton;
+@property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 
 @end
 
@@ -41,6 +43,8 @@
     self.userImage.image = cellVM.userImage;
     self.usernameLabel.text = cellVM.username;
     self.userstatusLabel.attributedText = cellVM.status;
+    [self.phoneButton setImage:cellVM.phoneButtonImage forState:UIControlStateNormal];
+    [self.chatButton setImage:cellVM.chatButtonImage forState:UIControlStateNormal];
 }
 
 @end

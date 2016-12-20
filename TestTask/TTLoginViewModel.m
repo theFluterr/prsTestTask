@@ -31,9 +31,12 @@
     user.password = password;
     RACSignal *loginSignal = [self.loginManager loginWithUser:user];
     
+    @weakify(self)
     [loginSignal subscribeError:^(NSError * _Nullable error) {
+        @strongify(self)
         self.loginStatus = LoginFailed;
     } completed:^{
+        @strongify(self)
         self.loginStatus = LoginSucceeded;
     }];
     

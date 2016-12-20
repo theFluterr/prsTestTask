@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class TTUserDetailViewModel;
+
 @interface TTDetailViewController : UIViewController
+
+- (void)bindViewModel:(TTUserDetailViewModel *)viewModel;
 
 @end
