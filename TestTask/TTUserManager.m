@@ -38,7 +38,7 @@
     NSMutableArray *userStorage = [NSMutableArray new];
     NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    //REFACTOR IMPLEMENT MAP
+    //Create user model objects, update them
     
     [[jsonData objectForKey:@"users"] bk_each:^(id obj) {
         NSString *username = [obj objectForKey:@"username"];
@@ -61,8 +61,8 @@
 }
 
 - (void)changeStatus {
+    //Locally update statuses
     NSMutableArray<TTUser *> *usersLocal = [NSMutableArray arrayWithArray:self.users];
-    
     [usersLocal bk_each:^(TTUser *obj) {
         NSInteger newStatus = arc4random_uniform(3);
         obj.status = newStatus;
@@ -81,7 +81,7 @@
 - (void)askPermissions {
     ABAddressBookRequestAccessWithCompletion(ABAddressBookCreateWithOptions(NULL, nil), ^(bool granted, CFErrorRef error) {
         if (!granted){
-            NSLog(@"Just denied");
+            NSLog(@"Denied");
             return;
         }
         [self fetchAddressBookUsers]; 
@@ -103,7 +103,7 @@
     }
     
     for (int i = 0; i < nPeople; i++) {
-        
+        //Parse fetched people and prepare model objects
         @autoreleasepool {
            
             ABRecordRef person = CFArrayGetValueAtIndex(allPeople, i);

@@ -47,6 +47,7 @@
     return self; 
 }
 
+//If we have a search term, then give away filtered viewModels as getter
 - (NSDictionary<NSString *, NSMutableArray<TTUserCellViewModel *> *> *)cellViewModels {
     if (self.searchKeyword.length > 0) {
         NSDictionary<NSString *, NSMutableArray<TTUserCellViewModel *> *> *filteredVMs = [NSDictionary dictionaryWithDictionary:[self filterUsersBy:self.searchKeyword]];
@@ -56,10 +57,12 @@
     }
 }
 
+//Create and sort section titles
 - (NSArray *)sectionTitles {
     return [[self.cellViewModels allKeys] sortedArrayUsingSelector:@selector(compare:)]; 
 }
 
+//Prepare and pack stuff from manager into cellVMs
 - (void)mapViewModels:(NSArray<TTUser *> *)input {
     NSArray *cellVMs = [NSArray new];
     NSArray *sortedInput = [input sortedArrayUsingSelector:@selector(compare:)];
@@ -96,6 +99,7 @@
     self.cellViewModels = cellsMutableCopy;
 }
 
+//Detail viewModel with reference to userManager for further status updates
 - (TTUserDetailViewModel *)createDetailViewModelForIndexPath:(NSIndexPath *)indexPath {
     NSString *sectionName = [self.sectionTitles objectAtIndex:indexPath.section];
     TTUserCellViewModel *cellVM = [[self.cellViewModels objectForKey:sectionName] objectAtIndex:indexPath.row];
@@ -104,6 +108,7 @@
     return detailVM;
 }
 
+//Filter based on search term
 - (NSMutableDictionary<NSString *, NSArray<TTUserCellViewModel *> *> *)filterUsersBy:(NSString *)keyword {
     NSMutableDictionary<NSString *, NSArray<TTUserCellViewModel *> *> *filteredCellVMs = [NSMutableDictionary new];
     

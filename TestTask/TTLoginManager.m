@@ -25,7 +25,7 @@
         
         return [RACSignal startEagerlyWithScheduler:scheduler block:^(id<RACSubscriber>  _Nonnull subscriber) {
             [scheduler afterDelay:2.0 schedule:^{
-                
+                //Tell subscriber about login state, save to userDefaults if needed
                 NSDictionary *loginInfo = [jsonData objectForKey:@"user_storage"];
                 if ([user.username isEqualToString:[loginInfo objectForKey:@"username"]] && [user.password isEqualToString:[loginInfo objectForKey:@"password"]]) {
                     [self saveToUserDefaults:user.username];

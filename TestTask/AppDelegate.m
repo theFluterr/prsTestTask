@@ -28,6 +28,7 @@
     
     UIStoryboard *storyboardRef = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
+    //Check wheter we are logged in or not
     if (![TTLoginManager shouldWriteToUserDefaults]) {
         UISplitViewController *splitVC = [storyboardRef instantiateViewControllerWithIdentifier:@"splitVC"];
         self.window.rootViewController = splitVC;

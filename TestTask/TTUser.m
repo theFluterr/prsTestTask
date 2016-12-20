@@ -26,9 +26,7 @@
 
 - (NSComparisonResult)compare:(TTUser *)other {
     NSComparisonResult result = [self.displayName compare:other.displayName];
-    
-     
-    
+   
     return result;
 }
 
