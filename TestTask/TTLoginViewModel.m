@@ -39,7 +39,6 @@
         @strongify(self)
         self.loginStatus = LoginSucceeded;
     }];
-    
 }
 
 @end

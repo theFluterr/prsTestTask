@@ -47,9 +47,11 @@
     self.tableView.tableHeaderView = self.searchBar;
     self.tableView.tableFooterView = [UIView new]; 
     
+    @weakify(self);
     [[[RACObserve(self.viewModel, cellViewModels) deliverOnMainThread]
      skip:1]
      subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
         [self.tableView reloadData]; 
     }];
 }

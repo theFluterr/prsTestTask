@@ -9,67 +9,67 @@
 },
 {
 "username": "use1@user.com",
-"display_name": "Dsers Userovich",
+"display_name": "John Connor",
 "status": 1,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use3@user.com",
-"display_name": "Daers Userovich",
+"display_name": "Sara Connor",
 "status": 2,
 "phone_numbers": ["+79214441122"]
 },
 {
 "username": "use4@user.com",
-"display_name": "Dbers Userovich",
+"display_name": "Neo Anderson",
 "status": 0,
 "phone_numbers": ["+79214441122"]
 },
 {
 "username": "use5@user.com",
-"display_name": "Asers Userovich",
+"display_name": "Luke Skywalker",
 "status": 1,
 "phone_numbers": ["+79214441122", "+79213421254"]
 },
 {
 "username": "use6@user.com",
-"display_name": "Ssers Userovich",
+"display_name": "Anakin Skywalker",
 "status": 1,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use7@user.com",
-"display_name": "Fsers Userovich",
+"display_name": "Elli Hoffmann",
 "status": 2,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use8@user.com",
-"display_name": "Fsers Userovich",
+"display_name": "Debera Billman",
 "status": 0,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use9@user.com",
-"display_name": "Фsers Userovich",
+"display_name": "Gordon Freeman",
 "status": 0,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use10@user.com",
-"display_name": "Asers Userovich",
+"display_name": "Eli Vance",
 "status": 1,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 },
 {
 "username": "use11@user.com",
-"display_name": "2sers Userovich",
+"display_name": "2user Userovich",
 "status": 2,
 "phone_numbers": ["+79214441122", "+79213421254"]
 },
 {
 "username": "use12@user.com",
-"display_name": "Rsers Userovich",
+"display_name": "Clemente Onofrio",
 "status": 1,
 "phone_numbers": ["+79214441122", "+79213421254", "+79813456311"]
 }
